@@ -29,9 +29,6 @@ dependencies {
 
 tasks {
     runServer {
-
-
-
         var url = "https://api.multipaper.io/v2/projects/shreddedpaper/versions/${mcVer}/builds/${buildNum}/downloads/shreddedpaper-${mcVer}-${buildNum}.jar"
         var jarPath = "./server/shreddedpaper-${mcVer}-${buildNum}.jar"
 
@@ -40,7 +37,6 @@ tasks {
             File("./server").mkdirs()
             download(url, jarPath)
         }
-
 
         serverJar(File(jarPath))
         minecraftVersion(mcVer)
